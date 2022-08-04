@@ -38,6 +38,8 @@ calculateEl.addEventListener('click', (e) => {
         console.log(`total is ${total}`);
     }
 
+    priceEl.innerHTML = `€${total}`;
+
 
 })
 
