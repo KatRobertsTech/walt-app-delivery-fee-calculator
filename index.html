@@ -9,78 +9,229 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="card">
-        <div class="card-image">
-          <figure class="image is-3by1 has-ratio">
-            <img src="img/rowan-freeman-clYlmCaQbzY-unsplash.jpg" alt="Placeholder image">
-          </figure>
-        </div>
-        <div class="card-content">
-          <div class="media">
-            <div class="media-content">
-              <p class="title is-4">Delivery Fee Calculator</p>
-              <p class="subtitle is-6">@waltapp</p>
-            </div>
-          </div>
-      
-          <div class="content">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-            <a href="#">#css</a> <a href="#">#responsive</a>
-            <br>
-            <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-          </div>
-        </div>
-      </div>
-
-
-    <div class="container">
-        <h1>Delivery Fee Calculator</h1>
-        <div class="form">
-            <form action="">
-                <div class="form-section">
-                    <label for="cart-value-el"><h3>Cart Value</h3></label>
-                    <div class="flex">
-                        <span class="currency">€</span>
-                        <input id="cart-value-el" type="number">
-                    </div>
-                </div>
-
-                <div class="form-section">
-                    <label for="distance-el"><h3>Delivery distance</h3></label>
-                    <div class="flex">
-                        <span class="currency">km</span>
-                        <input type="number" id = "distance-el">
-                    </div>
-
-                </div>
-
-                <div class="form-section">
-                    <label for="items-num-el"><h3>Amount of items</h3></label>
-                    <input type="number" id="items-num-el">
-                </div>    
-
-                <div class="form-section">
-                    <label for="date-el"><h3>Date</h3></label>
-                    <input type="date" id="date-el">
-                </div>    
+    <section class="section">
+        <div class = "container">
+            <div class = "columns is-mobile is-centered">
+                <div class = "column is-two-thirds-tablet is-half-desktop">
+                    <div class="card">
+                        <div class="card-image">
+                          <figure class="image is-3by1 has-ratio">
+                            <img src="img/rowan-freeman-clYlmCaQbzY-unsplash.jpg" alt="Delivery driver on a motorbike">
+                          </figure>
+                        </div>
+                        <div class="card-content">
+                          <div class="media">
+                            <div class="media-content">
+                              <p class="title is-4">Delivery Fee Calculator</p>
+                              <p class="subtitle is-6">by <a href="https://www.katarinaroberts.com">@KatRobertsTech</a></p>
+                            </div>
+                          </div>
+                      
+                          <div class="content mb-6">
+                            Enter required values to display your delivery price!
+                          </div>    
                 
-                <div class="form-section">
-                    <label for="time-el"><h3>Time</h3></label>
-                    <input type="time" id="time-el">
-                </div>    
+                          <div class="field is-horizontal columns is-mobile">
+                            <div class="field-label is-normal column">
+                              <label for="cart-value-el" class="label">Cart Value</label>
+                            </div>
+                            <div class="field-body column">
+                              <div class="field">
+                                <p class="control is-expanded">
+                                  <input id="cart-value-el" class="input" type="number" placeholder="Cart Value">
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div class="field is-horizontal columns is-mobile">
+                            <div class="field-label is-normal column">
+                              <label for="distance-el" class="label">Delivery distance</label>
+                            </div>
+                            <div class="field-body column">
+                                <div class="field">
+                                  <p class="control is-expanded">
+                                    <input id= "distance-el" class="input" type="number" placeholder="Delivery Distance">
+                                  </p>
+                                </div>
+                              </div>
+                          </div>
+                
+                          <div class="field is-horizontal columns is-mobile">
+                            <div class="field-label is-normal column">
+                              <label for= "items-num-el" class="label">Amount of items</label>
+                            </div>
+                            <div class="field-body column">
+                              <div class="field">
+                                <p class="control is-expanded">
+                                  <input id= "items-num-el" class="input" type="number" placeholder="Amount of items">
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                
+                          <div class="field is-horizontal columns is-mobile">
+                            <div class="field-label is-normal column">
+                              <label for= "date-el" class="label">Date</label>
+                            </div>
+                            <div class="field-body column">
+                              <div class="field">
+                                <p class="control is-expanded">
+                                  <input id="date-el" class="input" type="date" placeholder="Date">
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="field is-horizontal columns is-mobile">
+                            <div class="field-label is-normal column">
+                              <label for= "time-el" class="label">Time</label>
+                            </div>
+                            <div class="field-body column">
+                              <div class="field">
+                                <p class="control is-expanded">
+                                  <input id= "time-el" class="input" type="time" placeholder="Time">
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          
 
-                <a href="" id ="calculate-el"><h3>Calculate delivery price</h3></a>
-            
-                <h2>Delivery price: <span id = "price-el">2€</span></h2>
+                          <div class="field is-horizontal columns is-mobile mt-5 mb-3">
+                            
+                            <div class="field-label is-normal column">   
+                                <div class="control">
+                                    <button id = "calculate-el" class="button is-primary">
+                                      Calculate delivery
+                                    </button>
+                                  </div>
+                            </div>
+
+                            <div class="field-label is-normal column">   
+                                <div class="control">
+                                    <button id = "reset-el" class="button is-primary has-background-danger">
+                                      Reset
+                                    </button>
+                                  </div>
+                            </div>
+                          </div>
+                          
+                          <div class="content has-text-centered">
+                            <p>Total delivery fee is: <span id="price-el"></span></p>
+                          </div>  
+                          <div class="content has-text-centered">
+                            <p>Total price including delivery fee is: <span id="final-el"></span></p>
+                          </div> 
+                
+                        </div>
+
+                    </div>
+                
+                
+                        <!-- <div class="form">
+                            <form action="">
+                                <div class="form-section">
+                                    <label for="cart-value-el"><h3>Cart Value</h3></label>
+                                    <div class="flex">
+                                        <span class="currency">€</span>
+                                        <input id="cart-value-el" type="number">
+                                    </div>
+                                </div>
+                
+                                <div class="form-section">
+                                    <label for="distance-el"><h3>Delivery distance</h3></label>
+                                    <div class="flex">
+                                        <span class="currency">km</span>
+                                        <input type="number" id = "distance-el">
+                                    </div>
+                
+                                </div>
+                
+                                <div class="form-section">
+                                    <label for="items-num-el"><h3>Amount of items</h3></label>
+                                    <input type="number" id="items-num-el">
+                                </div>    
+                
+                                <div class="form-section">
+                                    <label for="date-el"><h3>Date</h3></label>
+                                    <input type="date" id="date-el">
+                                </div>    
+                                
+                                <div class="form-section">
+                                    <label for="time-el"><h3>Time</h3></label>
+                                    <input type="time" id="time-el">
+                                </div>    
+                
+                                <a href="" id ="calculate-el"><h3>Calculate delivery price</h3></a>
+                            
+                                <h2>Delivery price: <span id = "price-el">2€</span></h2>
+                            </form> -->
+                </div>
+                </div>
+            </div>
+        </div>    
+    </section>
+
     
-            </form>
+    
+
+    
+    <footer class="footer">
+        <div class="content has-text-centered">
+          <p>
+            <strong>Wolt App Delivery Fee Calculator</strong> by <a href="https://www.katarinaroberts.com">@KatRobertsTech</a>.
+          </p>
+          <p>This project was created based on <a href="https://github.com/woltapp/engineering-summer-intern-2022">Wolt Summer 2022 Engineering Internships</a> using HTML, CSS, Javascript and <a href="https://bulma.io/">@bulmaio.</a></p>
+          <p>Image credits go to <a href="https://unsplash.com/@rowanfreeman">Rowan Freeman</a>.</p>
         </div>
-
-    </div>
-    
-
+    </footer>
 
     <script src="script.js"></script>
 </body>
 </html>
+
+
+
+<!-- <div class="container">
+    <h1>Delivery Fee Calculator</h1>
+    <div class="form">
+        <form action="">
+            <div class="form-section">
+                <label for="cart-value-el"><h3>Cart Value</h3></label>
+                <div class="flex">
+                    <span class="currency">€</span>
+                    <input id="cart-value-el" type="number">
+                </div>
+            </div>
+
+            <div class="form-section">
+                <label for="distance-el"><h3>Delivery distance</h3></label>
+                <div class="flex">
+                    <span class="currency">km</span>
+                    <input type="number" id = "distance-el">
+                </div>
+
+            </div>
+
+            <div class="form-section">
+                <label for="items-num-el"><h3>Amount of items</h3></label>
+                <input type="number" id="items-num-el">
+            </div>    
+
+            <div class="form-section">
+                <label for="date-el"><h3>Date</h3></label>
+                <input type="date" id="date-el">
+            </div>    
+            
+            <div class="form-section">
+                <label for="time-el"><h3>Time</h3></label>
+                <input type="time" id="time-el">
+            </div>    
+
+            <a href="" id ="calculate-el"><h3>Calculate delivery price</h3></a>
+        
+            <h2>Delivery price: <span id = "price-el">2€</span></h2>
+
+        </form>
+    </div>
+
+</div> -->
