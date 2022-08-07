@@ -1,3 +1,7 @@
 img {
     object-fit: cover;
   }
+
+  .not-padding {
+    padding: 0;
+  }
