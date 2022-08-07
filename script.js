@@ -5,6 +5,9 @@ const dateEl = document.querySelector('#date-el');
 const timeEl = document.querySelector('#time-el');
 const calculateEl = document.querySelector('#calculate-el');
 const priceEl = document.querySelector('#price-el');
+const finalEl = document.querySelector('#final-el');
+const resetEl = document.querySelector('#reset-el');
+
 let time;
 let timeValue;
 let surcharge = 0;
@@ -13,6 +16,7 @@ let peak = false;
 let distance;
 let itemsNum;
 let total;
+let result;
 
 
 
@@ -34,13 +38,32 @@ calculateEl.addEventListener('click', (e) => {
         console.log('Free delivery');
         total = 0;
     } else {
-        total = cartValue + surchargeCalculation();
-        console.log(`total is ${total}`);
+        // total = cartValue + surchargeCalculation();
+        total = surchargeCalculation();
+        result = Math.round(total * 10) / 10;
+
+        // total = surcharge;
+        console.log(`total is ${result}`);
     }
 
-    priceEl.innerHTML = `€${total}`;
+    priceEl.innerHTML = `€${result}`;
+    finalEl.innerHTML = `€${result + cartValue}`;
+    surcharge = 0;
+    result = 0;
+})
 
-
+resetEl.addEventListener('click', (e) => {
+    e.preventDefault();
+    surcharge = 0;
+    result = 0;
+    peak = false;
+    priceEl.innerHTML = ``;
+    finalEl.innerHTML = ``;
+    cartValueEl.value = ``;
+    distanceEl.value = ``;
+    itemsNumEl.value = ``;
+    dateEl.value = ``;
+    timeEl.value = ``;
 })
 
 //this function finds out day of the week from the dateEl.value
@@ -109,12 +132,14 @@ const surchargeCalculation = () => {
     console.log(`distance in metres is: ${metres}`);
     if (metres > 1000) {
         metres -= 1000;
+        // console.log(metres);
         while (metres >= 500) {
             surcharge += 1;
             metres -= 500;
-            if (metres > 0) {
-                surcharge += 1;
-            }
+            console.log(surcharge);
+        }
+        if (metres > 0) {
+            surcharge += 1;
         }
     }
     console.log(`surcharge for distance is ${surcharge}`);
